@@ -1,0 +1,432 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@500;700&family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+/* === Bootstrap-like Custom CSS === */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background: #111;
+  color: #fff;
+  font-family: 'Inter', 'Poppins', 'Roboto', 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+}
+
+/* Sarlavhalar uchun zamonaviy font */
+h1, h2, h3, h4, h5, h6, .navbar-brand, .section-title, .studies-title, .testimonial-title, .work-card-title {
+  font-family: 'Montserrat', 'Poppins', 'Inter', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Navbar (Bootstrap style) */
+.navbar {
+  background: #181818;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navbar-brand {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #4cc900;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+.navbar-nav {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-nav li {
+  display: block;
+}
+.navbar-nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1.7rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+.navbar-nav a.active, .navbar-nav a:hover {
+  color: #fff;
+  background: #232323;
+}
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  color: #4cc900;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+
+/* Responsive Navbar */
+@media (max-width: 700px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    display: none;
+  }
+  .navbar-nav.show {
+    display: flex;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .social-icons {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #4cc900;
+}
+
+/* List Styles (studies, testimonials) */
+.studies-list, .testimonials-list {
+  background: #181818;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 2rem #0005;
+  padding: 1.2rem 2vw;
+  width: 96vw;
+  max-width: 120rem;
+  margin: 2rem auto 0 auto;
+}
+.studies-item, .testimonial-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+.studies-item:last-child, .testimonial-item:last-child {
+  border-bottom: none;
+}
+.studies-title, .testimonial-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #4cc900;
+  margin-bottom: 0.7rem;
+}
+.studies-meta {
+  font-size: 1.3rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+.studies-desc, .testimonial-desc {
+  font-size: 1.6rem;
+  color: #eee;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-container {
+  max-width: 50rem;
+  margin: 8rem auto 0 auto;
+  background: #181818;
+  border-radius: 2rem;
+  box-shadow: 0 0 4rem #000a;
+  padding: 4rem 3rem;
+  text-align: left;
+}
+.contact-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #4cc900;
+}
+.contact-container p {
+  color: #aaa;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  color: #ccc;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #222;
+  color: #fff;
+  font-size: 1.5rem;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 0.2rem solid #4cc900;
+}
+.contact-form button {
+  background: #4cc900;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7rem;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 2rem #4cc90055;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #3ea700;
+}
+
+/* Profile Pic & Intro */
+.profile-pic {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 2rem #000a;
+  background: #222;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+.intro {
+  max-width: 50rem;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+.intro h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.intro p {
+  font-size: 1.6rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+.cta-btn {
+  background: #4cc900;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7rem;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 2rem #4cc90055;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 2rem;
+}
+.cta-btn:hover {
+  background: #3ea700;
+}
+
+/* Partners */
+.partners {
+  margin: 4rem auto 0 auto;
+  max-width: 110rem;
+  text-align: left;
+  padding: 0 2rem;
+}
+.partners-title {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+}
+.partner-logos {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.partner-logo {
+  background: #181818;
+  border-radius: 1.2rem;
+  padding: 1.5rem 2rem;
+  min-width: 10rem;
+  text-align: center;
+  color: #888;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 1rem #0003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.partner-logo:hover {
+  transform: translateY(-0.5rem) scale(1.03);
+  box-shadow: 0 0 2rem #4cc90033;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    padding: 1rem;
+  }
+  .partners {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .studies-list, .testimonials-list {
+    padding: 0.7rem 1vw;
+    width: 99vw;
+    margin: 1rem auto 0 auto;
+  }
+  .studies-title, .testimonial-title {
+    font-size: 1.5rem;
+  }
+  .profile-pic {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+  .navbar {
+    padding: 1rem 0.5rem;
+  }
+  .container {
+    padding: 0.2rem;
+  }
+}
+
+.work-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.work-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.work-card {
+  background: linear-gradient(135deg, #181818 60%, #232323 100%);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 #000a, 0 1.5px 8px #4cc90022;
+  border: 1.5px solid #232323;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 28rem;
+  max-width: 36rem;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+  backdrop-filter: blur(0.5px);
+  position: relative;
+  overflow: hidden;
+}
+.work-card:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 2rem;
+  pointer-events: none;
+  background: linear-gradient(120deg, #4cc90022 0%, #23232300 100%);
+  z-index: 0;
+}
+.work-card:hover {
+  transform: translateY(-0.7rem) scale(1.025);
+  box-shadow: 0 12px 40px 0 #4cc90044, 0 2px 12px #23232355;
+  border-color: #4cc900;
+}
+.work-card-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #4cc900;
+  margin-bottom: 1rem;
+  z-index: 1;
+  position: relative;
+}
+.work-card-desc {
+  font-size: 1.5rem;
+  color: #eaeaea;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  z-index: 1;
+  position: relative;
+}
+.work-card-link {
+  margin-top: auto;
+  text-align: right;
+  z-index: 1;
+  position: relative;
+}
+.work-card-link a {
+  color: #4cc900;
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-decoration: none;
+  border-bottom: 1.5px solid #4cc90044;
+  padding-bottom: 0.1rem;
+  transition: color 0.18s, border-color 0.18s;
+}
+.work-card-link a:hover {
+  color: #fff;
+  border-color: #4cc900;
+}
+@media (max-width: 900px) {
+  .work-section, .work-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .work-card {
+    min-width: 90%;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .work-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    min-width: 98vw;
+    max-width: 99vw;
+  }
+}

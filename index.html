@@ -4,153 +4,19 @@
   <meta charset="UTF-8">
   <title>Your Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: 'Inter', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleNav() {
+      var nav = document.getElementById('mainNav');
+      nav.classList.toggle('show');
     }
-    nav {
-      background: #181818;
-      padding: 20px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 40px;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-    }
-    nav ul li a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.2s;
-    }
-    nav ul li a:hover {
-      color: #fff;
-    }
-    nav ul li a.active {
-      color: #4cc900;
-      font-weight: bold;
-      border-bottom: 2px solid #4cc900;
-    }
-    .social-icons {
-      margin-left: 40px;
-      display: flex;
-      gap: 20px;
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 70vh;
-      gap: 60px;
-    }
-    .intro {
-      max-width: 500px;
-    }
-    .intro h1 {
-      font-size: 48px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .intro p {
-      font-size: 18px;
-      color: #aaa;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-    .cta-btn {
-      background: #4cc900;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      padding: 20px 40px;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 0 30px #4cc90055;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-bottom: 40px;
-    }
-    .cta-btn:hover {
-      background: #3ea700;
-    }
-    .profile-pic {
-      width: 340px;
-      height: 340px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 40px #000a;
-      background: #222;
-      display: block;
-    }
-    .partners {
-      margin: 60px auto 0 auto;
-      max-width: 1100px;
-      text-align: left;
-    }
-    .partners-title {
-      color: #fff;
-      font-size: 18px;
-      margin-bottom: 20px;
-      margin-left: 10px;
-    }
-    .partner-logos {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    .partner-logo {
-      background: #181818;
-      border-radius: 12px;
-      padding: 30px 40px;
-      min-width: 160px;
-      text-align: center;
-      color: #888;
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px #0003;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 70px;
-    }
-    .partner-logo:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 0 40px #4cc90033;
-    }
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
-        gap: 30px;
-        min-height: 0;
-        padding: 40px 0;
-      }
-      .profile-pic {
-        width: 220px;
-        height: 220px;
-      }
-      .partner-logos {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+  </script>
 </head>
 <body>
-  <nav>
-    <ul>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">BaxromDev</a>
+    <button class="navbar-toggler" onclick="toggleNav()">&#9776;</button>
+    <ul class="navbar-nav" id="mainNav">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="studies.html">Case Studies</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
@@ -165,7 +31,7 @@
         <svg width="24" height="24" fill="#ccc" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.719 0-4.924 2.206-4.924 4.924 0 .386.044.762.127 1.124-4.09-.205-7.719-2.165-10.148-5.144-.424.729-.666 1.577-.666 2.476 0 1.708.87 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.062c0 2.385 1.697 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.317 0-.626-.031-.927-.089.627 1.956 2.444 3.377 4.6 3.417-1.685 1.32-3.808 2.107-6.102 2.107-.396 0-.787-.023-1.175-.069 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14.009-7.504 14.009-14.009 0-.213-.005-.426-.014-.637z"/></svg>
       </a>
       <a href="">
-        <img src="image.png" alt="" style="width: 24px; height: 24px; fill: #ccc; viewBox: 0 0 24 24; background-color: #ccc; border-radius: 50%;">
+        <img src="image.png" alt="" style="width: 24px; height: 24px; background-color: #ccc; border-radius: 50%;">
       </a>
     </div>
   </nav>

@@ -4,122 +4,13 @@
   <meta charset="UTF-8">
   <title>Recent Work</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background: #111;
-      color: #fff;
-      font-family: 'Inter', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    nav {
-      background: #181818;
-      padding: 20px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 40px;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-    }
-    nav ul li a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.2s;
-    }
-    nav ul li a:hover {
-      color: #fff;
-    }
-    .social-icons {
-      margin-left: 40px;
-      display: flex;
-      gap: 20px;
-    }
-    .work-section {
-      max-width: 1200px;
-      margin: 60px auto 0 auto;
-      padding: 0 20px;
-    }
-    .work-section h1 {
-      font-size: 42px;
-      font-weight: bold;
-      margin-bottom: 30px;
-      text-align: left;
-    }
-    .work-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
-    }
-    .work-card {
-      background: #181818;
-      border-radius: 18px;
-      box-shadow: 0 0 30px #000a;
-      padding: 32px 28px;
-      color: #fff;
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 260px;
-    }
-    .work-card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 0 40px #4cc90033;
-    }
-    .work-card-title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 16px;
-      color: #4cc900;
-    }
-    .work-card-desc {
-      font-size: 17px;
-      color: #ccc;
-      margin-bottom: 18px;
-      line-height: 1.5;
-    }
-    .work-card-link {
-      margin-top: auto;
-      text-align: right;
-    }
-    .work-card-link a {
-      color: #4cc900;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.2s;
-    }
-    .work-card-link a:hover {
-      color: #fff;
-      text-decoration: underline;
-    }
-    @media (max-width: 700px) {
-      .work-section h1 {
-        font-size: 30px;
-      }
-      .work-card {
-        padding: 20px 12px;
-      }
-    }
-    nav ul li a.active {
-      color: #4cc900;
-      font-weight: bold;
-      border-bottom: 2px solid #4cc900;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">BaxromDev</a>
+    <button class="navbar-toggler" onclick="toggleNav()">&#9776;</button>
+    <ul class="navbar-nav" id="mainNav">
       <li><a href="index.html">Home</a></li>
       <li><a href="studies.html">Case Studies</a></li>
       <li><a href="testimonials.html">Testimonials</a></li>
@@ -134,54 +25,62 @@
         <svg width="24" height="24" fill="#ccc" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.719 0-4.924 2.206-4.924 4.924 0 .386.044.762.127 1.124-4.09-.205-7.719-2.165-10.148-5.144-.424.729-.666 1.577-.666 2.476 0 1.708.87 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.062c0 2.385 1.697 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.317 0-.626-.031-.927-.089.627 1.956 2.444 3.377 4.6 3.417-1.685 1.32-3.808 2.107-6.102 2.107-.396 0-.787-.023-1.175-.069 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14.009-7.504 14.009-14.009 0-.213-.005-.426-.014-.637z"/></svg>
       </a>
       <a href="">
-        <img src="image.png" alt="" style="width: 24px; height: 24px; fill: #ccc; viewBox: 0 0 24 24; background-color: #ccc; border-radius: 50%;">
+        <img src="image.png" alt="" style="width: 24px; height: 24px; background-color: #ccc; border-radius: 50%;">
       </a>
     </div>
   </nav>
-  <div class="work-section">
-    <h1>Recent Work</h1>
-    <div class="work-cards">
-      <div class="work-card">
-        <div class="work-card-title">E-commerce Website</div>
-        <div class="work-card-desc">
-          Developed a modern online store with product catalog, shopping cart, and secure checkout. Used HTML, CSS, and JavaScript for a seamless user experience.
+  <script>
+    function toggleNav() {
+      var nav = document.getElementById('mainNav');
+      nav.classList.toggle('show');
+    }
+  </script>
+  <div class="container">
+    <h1 class="section-title">Recent Work</h1>
+    <div class="work-section">
+      <div class="work-cards">
+        <div class="work-card">
+          <div class="work-card-title">E-commerce Website</div>
+          <div class="work-card-desc">
+            Developed a modern online store with product catalog, shopping cart, and secure checkout. Used HTML, CSS, and JavaScript for a seamless user experience.
+          </div>
+          <div class="work-card-link"><a href="#">View Project</a></div>
         </div>
-        <div class="work-card-link"><a href="#">View Project</a></div>
-      </div>
-      <div class="work-card">
-        <div class="work-card-title">Portfolio Landing Page</div>
-        <div class="work-card-desc">
-          Designed a personal portfolio page to showcase skills and projects. Responsive layout, interactive elements, and clean design.
+        <div class="work-card">
+          <div class="work-card-title">Portfolio Landing Page</div>
+          <div class="work-card-desc">
+            Designed a personal portfolio page to showcase skills and projects. Responsive layout, interactive elements, and clean design.
+          </div>
+          <div class="work-card-link"><a href="#">View Project</a></div>
         </div>
-        <div class="work-card-link"><a href="#">View Project</a></div>
-      </div>
-      <div class="work-card">
-        <div class="work-card-title">Blog Platform</div>
-        <div class="work-card-desc">
-          Built a blog platform with post management, comments, and user authentication. Focused on usability and performance.
+        <div class="work-card">
+          <div class="work-card-title">Blog Platform</div>
+          <div class="work-card-desc">
+            Built a blog platform with post management, comments, and user authentication. Focused on usability and performance.
+          </div>
+          <div class="work-card-link"><a href="#">View Project</a></div>
         </div>
-        <div class="work-card-link"><a href="#">View Project</a></div>
-      </div>
-      <div class="work-card">
-        <div class="work-card-title">Task Management App</div>
-        <div class="work-card-desc">
-          Created a task manager for teams with real-time updates, notifications, and analytics dashboard. Used modern web technologies.
+        <div class="work-card">
+          <div class="work-card-title">Task Management App</div>
+          <div class="work-card-desc">
+            Created a task manager for teams with real-time updates, notifications, and analytics dashboard. Used modern web technologies.
+          </div>
+          <div class="work-card-link"><a href="#">View Project</a></div>
         </div>
-        <div class="work-card-link"><a href="#">View Project</a></div>
-      </div>
-      <div class="work-card">
-        <div class="work-card-title">Travel Agency Site</div>
-        <div class="work-card-desc">
-          Developed a travel agency website with booking system, destination gallery, and customer reviews. Optimized for mobile devices.
+        <div class="work-card">
+          <div class="work-card-title">Travel Agency Site</div>
+          <div class="work-card-desc">
+            Developed a travel agency website with booking system, destination gallery, and customer reviews. Optimized for mobile devices.
+          </div>
+          <div class="work-card-link"><a href="#">View Project</a></div>
         </div>
-        <div class="work-card-link"><a href="#">View Project</a></div>
-      </div>
-      <div class="work-card">
-        <div class="work-card-title">Restaurant Menu App</div>
-        <div class="work-card-desc">
-          Built a digital menu app for restaurants with food ordering, payment integration, and admin panel for menu updates.
+        <div class="work-card">
+          <div class="work-card-title">Restaurant Menu App</div>
+          <div class="work-card-desc">
+            Built a digital menu app for restaurants with food ordering, payment integration, and admin panel for menu updates.
+          </div>
+          <div class="work-card-link"><a href="#">View Project</a></div>
         </div>
-        <div class="work-card-link"><a href="#">View Project</a></div>
       </div>
     </div>
   </div>
